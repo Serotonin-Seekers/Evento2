@@ -3,6 +3,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     text-align: center;
+    color: white;
 }
 button {
     text-align: center;
@@ -77,4 +78,8 @@ input:checked + .slider:before {
 form {
     font-size: large;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#imageId {
+    width: 150px;
+    height: auto;
 }
