@@ -13,3 +13,5 @@ const sequelize = new Sequelize(
 );
 
 module.exports = sequelize;
+
+// Need to install JAWSdb to enable databases to work with Heroku
