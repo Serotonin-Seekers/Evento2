@@ -1,3 +1,3 @@
-DROP database IF EXISTS event_db;
+DROP database IF EXISTS eventdb;
 
-create DATABASE event_db;
+create DATABASE eventdb;
