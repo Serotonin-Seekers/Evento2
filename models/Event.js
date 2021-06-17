@@ -22,7 +22,6 @@ Event.init(
     genre: {
       type: DataTypes.STRING,
       allowNull: false,
-
       //   Provide drop down box with Seeded Genre values already
     },
 
@@ -30,7 +29,10 @@ Event.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-
+    startingTime:{
+      type: DataTypes.TIME,
+      allowNull:false,
+    },
     startingDate: {
       type: DataTypes.DATEONLY,
       allowNull: false,
@@ -61,7 +63,7 @@ Event.init(
     sequelize,
     timestamps: false,
     freezeTableName: true,
-    modelName: "user",
+    modelName: "event",
   }
 );
 

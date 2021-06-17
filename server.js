@@ -10,6 +10,12 @@ const sequelize = require("./config/connection");
 // connect to sql with sequelize
 const helpers = require("./utils/helpers");
 
+const User = require("./models/User.js")
+User.sync({ force: false });
+
+const Event = require("./models/Event");
+Event.sync({ force: false });
+
 const app = express();
 const PORT = process.env.PORT || 3001;
 
@@ -34,6 +40,6 @@ app.use(express.static(path.join(__dirname, "public")));
 
 app.use(routes);
 
-sequelize.sync({ force: false }).then(() => {
-  app.listen(PORT, () => console.log(`Now listening on Port: ${PORT}`));
-});
+// sequelize.sync({ force: false }).then(() => {
+//   app.listen(PORT, () => console.log(`Now listening on Port: ${PORT}`));
+// });
