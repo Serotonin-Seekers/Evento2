@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-   <link rel="stylesheet" href="/css/style.css" type="text/css" />
+   <link rel="stylesheet" href="./style2.css" type="text/css" />
     <title>Add Event</title>
   </head>
   <body>
@@ -28,7 +28,10 @@
         id="locationId"
       />
       <br />
-
+      <label for="startingTime">Starting Time: </label><br />
+      <input type="text" name="startingTime" id="startTime" />
+      <br />
+      
       <label for="startingDate">Starting Date: </label><br />
       <input type="text" name="startingDate" id="startDate" />
       <br />
@@ -47,8 +50,16 @@
 
       <label for="ticketUrl">Ticket URL: </label><br />
       <input type="url" name="ticketLink" id="urlId" />
+
+      <button id="submit">Submit Event</button>
     </form>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+    <script src="../public/addevent.js"></script>
+
   </body>
+
 </html>
 
 //database info is inserted here // backend form action here //current info is

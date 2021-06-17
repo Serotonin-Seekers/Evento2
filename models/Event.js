@@ -67,4 +67,9 @@ Event.init(
   }
 );
 
+
+
 module.exports = Event;
+
+
+// views/addevent.html 

@@ -1,5 +1,7 @@
 body {
     font-family: Poppins;
+    background-image: url("../public/images/splashimage.jpg");
+    color: white;
 }
 img {
     width: 100vw;
