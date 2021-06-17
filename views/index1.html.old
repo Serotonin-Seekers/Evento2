@@ -9,15 +9,18 @@
     <title>Event-Woo</title>
   </head>
   <body>
-    <h1>Event-Woo</h1>
-    <label class="switch">
-      <input type="checkbox" />
-      <span class="slider round"></span>
-    </label>
-    <a href="addevent.html"><button>Add Event</button></a>
-    <a href="./viewevents.html"> <button>View Events</button></a>
-    <a href="./signup.html"><button>Sign Up</button></a>
-    <a href="login.html"><button>Login</button></a>
+    <div id="top">
+      <h1>Event-Woo</h1>
+      <label class="switch">
+        <input type="checkbox" />
+        <span class="slider round"></span>
+      </label>
+      <a href="addevent.html"><button>Add Event</button></a>
+      <a href="./viewevents.html"> <button>View Events</button></a>
+      <a href="./signup.html"><button>Sign Up</button></a>
+      <a href="login.html"><button>Login</button></a>
+    </div>
+
     <form>
       <label for="Search">Search Events:</label>
       <input type="text" id="searchEvents" name="Search" />
