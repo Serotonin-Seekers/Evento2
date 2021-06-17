@@ -16,6 +16,7 @@ $(document).ready(function(){
         let ticketUrl = $("#urld").val()
         if (eventName == null||producerName == null||genre == null||location == null||startTime == null||startDate == null||endDate == null|| eventSummary == null|| imageUrl == null || ticketUrl == null) {
             alert("Enter all fields!")
-        } 
+        }
+        console.log(eventName)
     });
   });

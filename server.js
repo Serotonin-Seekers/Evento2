@@ -1,3 +1,5 @@
+require("./models")
+// needed this to allow sequelise to read the models table
 const path = require("path");
 const express = require("express");
 // Import express-session
@@ -10,7 +12,6 @@ const sequelize = require("./config/connection");
 // connect to sql with sequelize
 const helpers = require("./utils/helpers");
 
-require("./models")
 
 
 const app = express();
@@ -33,7 +34,7 @@ app.set("view engine", "handlebars");
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname, "/public/")));
 
 app.use(routes);
 

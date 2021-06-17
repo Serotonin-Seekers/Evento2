@@ -1,7 +1,6 @@
 21 June 2021
 
-Event-Woo
-
+The Velvet Soap Box
 
 [Heroku Deployment](https://event-woo-serotonin-seekers.herokuapp.com/)
 

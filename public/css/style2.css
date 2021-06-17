@@ -1,0 +1,62 @@
+body {
+    font-family: Poppins;
+    background-image: url("../images/splashimage.jpg");
+    /* This messes up sightly with images loaded over each other on the home page */
+    /* Dunno if we need this - background image also is loaded from html - This only shows part of the top bar */
+    color: white;
+}
+img {
+    width: 100vw;
+}
+#Velvet {
+    display: block;
+    position: relative;
+    top: -2.5vh;
+    font-family: Poppins-italic;
+    font-size: 7vh;
+}
+header {
+    height: 10vh;
+    background-color: whitesmoke;
+    text-align: center;
+    margin: 0px;
+}
+
+nav {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0px;
+    min-height: 15vh;
+}
+.nav-choice {
+    height:fit-content;
+    position: relative;
+    top: 2vh;
+    z-index: 10;
+}
+.divider {
+    display:block;
+    width: 100vw;
+    height: 0.5vh;
+    top: 100px;
+    background-color: tomato;
+}
+
+/* nav{
+    height: 100px;
+    background-color: white;
+} */
+span {
+    font-family: Poppins;
+    color: black;
+    font-size: large;
+}
+
+@font-face {
+    font-family: Poppins;
+    src: url(./font/Poppins-Light.ttf);
+  }
+@font-face {
+    font-family: Poppins-italic;
+    src: url(./font/Poppins-ExtraLightItalic.ttf);
+}
