@@ -1,3 +1,5 @@
+// Need to get JAWSdb Working to allow Heroku to deploy - https://coding-boot-camp.github.io/full-stack/heroku/deploy-with-heroku-and-mysql
+
 const Sequelize = require('sequelize');
 require('dotenv').config();
 
