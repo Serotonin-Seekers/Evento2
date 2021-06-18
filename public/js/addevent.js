@@ -43,9 +43,15 @@ $(document).ready(function () {
       ticketUrl: ticketUrl,
     };
 
+    //object keys (line 33-43) has to be exactly same as table 
+
     console.log(formData)
     // Object is already formatted nicely so in eventRoutes.js we only have to call req.body
     let eventDataResponse = await fetch("/api/events", {
+      // how front end and back end speak to each other
+      // kitchen located api/events 
+      // this kitchen exists because of eventRoute.js file
+      // i want to send form data to the kitchen 
       method: "POST",
       body: JSON.stringify(formData),
       headers: { "Content-Type": "application/json" },
