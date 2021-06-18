@@ -1,6 +1,9 @@
 const router = require("express").Router();
 const path = require("path")
+const apiRoutes = require("./api")
 // const apiRoutes = require("")
+
+router.use("/api", apiRoutes);
 
 
 router.get("/", async (request, response) => {
@@ -25,4 +28,6 @@ router.get("/viewevents", async (request, response) => {
 
 // 18/06 JH - Dont currently have links working to each page but if you type the path in the get() [ie: http://localhost:3001/addevent ] you can view the page :)
 
+
 module.exports = router;
+// Router has extra functionality to allow us to push apiRoutes variable to api folder

@@ -43,8 +43,9 @@ Event.init(
     },
 
     eventSummary: {
-      type: DataTypes.STRING(9999),
+      type: DataTypes.TEXT,
       //   might need to allow more characters to type as much as they want
+      // DataType.Text instead of string, Allows paragraphs of content rather than limited (VarChar)
 
       allowNull: false,
     },
