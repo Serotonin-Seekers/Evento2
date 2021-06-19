@@ -31,6 +31,8 @@ const hbs = exphbs.create({ helpers });
 
 app.engine("handlebars", hbs.engine);
 app.set("view engine", "handlebars");
+//JH - all of handlebars npm has the rendered functions in homeRoutes.js (controller folder)
+// these renders are done based on the .handlebars files found in the view folder
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));

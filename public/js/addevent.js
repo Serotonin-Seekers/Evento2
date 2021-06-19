@@ -1,6 +1,7 @@
 $(document).ready(function () {
   const eventFormHandler = $("#submit").click(async function (e) {
     e.preventDefault();
+    // removing the prevent default gets the url links working but  says "please enter URL"
     const eventName = $("#eventNameId").val();
     const producerName = $("#producerId").val();
     const genre = $("#genreId").val();
