@@ -1,8 +1,5 @@
 $(document).ready(function () {
-  let signupFormHandler = async (event) => {
-    event.preventDefault();
-  };
-  $("#submit").click(async function (e) {
+  const eventFormHandler = $("#submit").click(async function (e) {
     e.preventDefault();
     const eventName = $("#eventNameId").val();
     const producerName = $("#producerId").val();
@@ -16,6 +13,7 @@ $(document).ready(function () {
     const imageUrl = $("#imageId").val();
     const ticketUrl = $("#urlId").val();
     // Double check that its picking up .val here
+
     if (
       eventName == null ||
       producerName == null ||
@@ -30,6 +28,7 @@ $(document).ready(function () {
     ) {
       alert("Enter all fields!");
     }
+    // Dont think this is working
     const formData = {
       eventName: eventName,
       productionCompanyName: producerName,
@@ -43,15 +42,15 @@ $(document).ready(function () {
       ticketUrl: ticketUrl,
     };
 
-    //object keys (line 33-43) has to be exactly same as table 
+    //object keys (line 33-43) has to be exactly same as table
 
-    console.log(formData)
+    console.log(formData);
     // Object is already formatted nicely so in eventRoutes.js we only have to call req.body
     let eventDataResponse = await fetch("/api/events", {
       // how front end and back end speak to each other
-      // kitchen located api/events 
+      // kitchen located api/events
       // this kitchen exists because of eventRoute.js file
-      // i want to send form data to the kitchen 
+      // i want to send form data to the kitchen
       method: "POST",
       body: JSON.stringify(formData),
       headers: { "Content-Type": "application/json" },

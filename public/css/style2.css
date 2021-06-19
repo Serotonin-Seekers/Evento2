@@ -1,6 +1,6 @@
 body {
     font-family: Poppins;
-    /* background-image: url("../images/splashimage.jpg"); */
+    background-image: url("../images/splashimage.jpg");
     /* This messes up sightly with images loaded over each other on the home page */
     /* Dunno if we need this - background image also is loaded from html - This only shows part of the top bar */
     color: white;

@@ -17,11 +17,14 @@ User.init(
     username: {
       type: DataTypes.STRING,
       allowNull: false,
+      unique: true,
     },
     email: {
       type: DataTypes.STRING,
       allowNull: false,
       unique: true,
+      // Dont think unique works - JH
+
       validate: {
         isEmail: true,
       },
@@ -36,13 +39,14 @@ User.init(
       // Needs to be hashed with bcrypt
     },
 
-    isProducer: {
-      type: DataTypes.BOOLEAN,
-      allowNull: false,
-      default: false,
+    // isProducer: {
+    //   type: DataTypes.BOOLEAN,
+    //   allowNull: false,
+    //   default: false,
+    // },
 
-      // if producer = true ... is a producer and has access to producer features (If not - is an atendee account)
-    },
+    // if producer = true ... is a producer and has access to producer features (If not - is an atendee account)
+    //19/06 JH  omitted isProducer column - Not needed - also issue was checkbox returning value of 'on' instead of 'true'
   },
   {
     sequelize,
