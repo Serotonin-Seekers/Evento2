@@ -1,0 +1,27 @@
+<html lang="en">
+
+  <head>
+    <title>The Velvet Soap Box</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css"
+    />
+    <link rel="stylesheet" href="css/style2.css" />
+
+    {{#if viewevents}}
+    {{> viewEventsStyleCss }}
+    {{/if}}
+    {{!-- This conditional doesnt work was trying to add a personalised stylesheet based on if a viewEvents handledbars is rendered --}}
+  </head>
+
+  <body>
+    {{{body}}}
+  </body>
+
+</html>

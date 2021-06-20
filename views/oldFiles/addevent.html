@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <link rel="stylesheet" href="css/style2.css" type="text/css" />
+    <title>Add Event</title>
+  </head>
+  <body>
+    <h1>Add New Event</h1>
+    <form>
+      <label for="eventName">Event Name: </label><br />
+      <input type="text" name="eventName" id="eventNameId" />
+      <br />
+
+      <label for="productionCompanyName">Production Company Name: </label><br />
+      <input type="text" name="productionCompanyName" id="producerId" />
+      <br />
+
+      <label for="genre">Genre: </label><br />
+      <input type="text" name="genreType" id="genreId" />
+      <br />
+
+      <label for="location">Location: </label><br /><input
+        type="text"
+        name="locationEvent"
+        id="locationId"
+      />
+      <br />
+      <label for="startingTime">Starting Time: </label><br />
+      <input type="time" name="startingTime" id="startTime" />
+      <br />
+      
+      <label for="startingDate">Starting Date: </label><br />
+      <input type="date" name="startingDate" id="startDate" />
+      <br />
+
+      <label for="endDate">End Date: </label><br />
+      <input type="date" name="endingDate" id="endDate" />
+      <br />
+
+      <label for="summary">Event Summary: </label><br />
+      <input type="text" name="eventSummary" id="summary" />
+      <br />
+
+      <label for="image">Image URL: </label><br />
+      <input type="url" name="image" id="imageId" />
+      <br />
+
+      <label for="ticketUrl">Ticket URL: </label><br />
+      <input type="url" name="ticketLink" id="urlId" />
+
+      <button id="submit">Submit Event</button>
+    </form>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+    <script src="/js/addevent.js"></script>
+    <!-- Start date and Start time changeede input to Date and Time so you can select in correct format for the server -->
+    <img src="images/splashimage.jpg" alt="" id="backg">
+  </body>
+
+</html>
+
+<!-- //database info is inserted here // backend form action here //current info is
+placeholder -->

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css" type="text/css" />
+    <!-- express static identifies the server location of the files in public therefore ./ = public -->
+    <title>Event-Woo</title>
+  </head>
+  <body>
+    <div id="top">
+      <h1>Event-Woo</h1>
+      <label class="switch">
+        <input type="checkbox" />
+        <span class="slider round"></span>
+      </label>
+      <a href="addevent.html"><button>Add Event</button></a>
+      <a href="./viewevents.html"> <button>View Events</button></a>
+      <a href="./signup.html"><button>Sign Up</button></a>
+      <a href="login.html"><button>Login</button></a>
+    </div>
+
+    <form>
+      <label for="Search">Search Events:</label>
+      <input type="text" id="searchEvents" name="Search" />
+    </form>
+  </body>
+</html>
+<!-- //main page splash page //may be converted to handlebars at a later date -->
+<!-- //placement of buttons fixed at later date -->

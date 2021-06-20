@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Producer Login</title>
+    <link rel="stylesheet" href="/css/style2.css" type="text/css" />
+    <!-- only have to put href as /css/style.css due express.static on ln 37 in server.js - Public is the destination file that the server searches for for all static files (i.e CSS, images and js for the html) -->
+  </head>
+  <body>
+    <h1>Producer Login</h1>
+
+    <form class="form login-form">
+      <div class="form-group">
+        <label for="email-login">email:</label>
+        <input class="form-input" type="text" id="email-login" />
+      </div>
+      <div class="form-group">
+        <label for="password-login">password:</label>
+        <input class="form-input" type="password" id="password-login" />
+      </div>
+      <div class="form-group">
+        <button class="btn btn-primary" type="submit">login</button>
+      </div>
+    </form>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+    <script src="/js/login.js"></script>
+
+    <!-- <script src="/js/login.js"></script> -->
+  </body>
+</html>
+
+<!-- //producers to edit/access their events //used as an authentication to access
+producer features -->
