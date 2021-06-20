@@ -41,7 +41,20 @@ router.get("/allevents", async (req, res) => {
      console.log(err);
      res.status(500).json(err);
    };
-  //  I SOMEHOW GOT THIS WORKING!!! JH - Views
+  //  I SOMEHOW GOT THIS WORKING!!! JH - Views the link of the events
+});
+
+router.get("/event/:id", async (req, res) => {
+  try {
+    const dbEventData = await Event.findByPk(req.params.id);
+
+    const event = dbEventData.get({ plain: true });
+    res.render("viewevents", { event });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+  console.log(req.params.id)
 });
 
 
