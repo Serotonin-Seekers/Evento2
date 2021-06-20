@@ -1,0 +1,10 @@
+<h1>All Events in the SOAP BOX!</h1>
+
+{{#each events as |event|}}
+<ul>
+    <a href="{{event.ticketUrl}}">
+        <li>{{event.eventName}}</li>
+    </a>
+</ul>
+{{/each}}
+{{>event-details}}

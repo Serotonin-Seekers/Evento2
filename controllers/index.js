@@ -1,6 +1,8 @@
 const router = require("express").Router();
 const path = require("path");
 const apiRoutes = require("./api");
+const { Event, User } = require("../models");
+
 // const apiRoutes = require("")
 
 router.use("/api", apiRoutes);
@@ -25,6 +27,37 @@ router.get("/signup", async (req, res) => {
 router.get("/viewevents", async (req, res) => {
   res.render("viewevents");
 });
+
+router.get("/allevents", async (req, res) => {
+   try {
+     const dbEventData = await Event.findAll();
+
+     const events = dbEventData.map((event) => event.get({ plain: true }));
+
+     res.render("viewallevents", {
+       events,
+     });
+   } catch (err) {
+     console.log(err);
+     res.status(500).json(err);
+   };
+  //  I SOMEHOW GOT THIS WORKING!!! JH - Views the link of the events
+});
+
+router.get("/event/:id", async (req, res) => {
+  try {
+    const dbEventData = await Event.findByPk(req.params.id);
+
+    const event = dbEventData.get({ plain: true });
+    res.render("viewevents", { event });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+  console.log(req.params.id)
+});
+
+
 
 // JH No longer need the below as the pages are now rendered from handlebars not the html files - Placed the html into an 'old' folder
 

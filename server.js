@@ -28,6 +28,7 @@ User.beforeCreate((user, options) => {
       .catch(err => { 
           throw new Error(); 
       });
+      // hashes the password
 });
 
 // router.post("/signup", async (req, res) => {
