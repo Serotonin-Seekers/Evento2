@@ -14,15 +14,28 @@ const sequelize = require("./config/connection");
 // connect to sql with sequelize
 const helpers = require("./utils/helpers");
 const router = require("./controllers/api/eventRoutes");
+const { User } = require("./models");
 
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-router.post("/signup", async (req, res) => {
-  try {
-    const hashedPassword = bcrypt.hash(req.body.password, 10);
-  } catch (error) {}
+User.beforeCreate((user, options) => {
+
+  return bcrypt.hash(user.password, 10)
+      .then(hash => {
+          user.password = hash;
+      })
+      .catch(err => { 
+          throw new Error(); 
+      });
 });
+
+// router.post("/signup", async (req, res) => {
+//   try {
+//     const hashedPassword = await bcrypt.hash(req.body.password, 10);
+    
+//   } catch (error) {}
+// });
 
 // Set up sessions
 const sess = {
