@@ -3,6 +3,7 @@
 
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
+const bcrypt = require("bcrypt");
 
 class User extends Model {}
 
@@ -54,6 +55,14 @@ User.init(
     freezeTableName: true,
     underscored: true,
     modelName: "user",
+      instanceMethods: {
+      generateHash(password) {
+          return bcrypt.hash(password, bcrypt.genSaltSync(8));
+      },
+      validPassword(password) {
+          return bcrypt.compare(password, this.password);
+      }
+    }
   }
 );
 
