@@ -1,4 +1,5 @@
-require("./models")
+require("./models");
+const bcrypt = require("bcrypt");
 // needed this to allow sequelise to read the models table
 const path = require("path");
 const express = require("express");
@@ -8,20 +9,30 @@ const exphbs = require("express-handlebars");
 
 const routes = require("./controllers");
 // looks for index.js
+const SequelizeStore = require("connect-session-sequelize")(session.Store);
 const sequelize = require("./config/connection");
 // connect to sql with sequelize
 const helpers = require("./utils/helpers");
-
-
+const router = require("./controllers/api/eventRoutes");
 
 const app = express();
 const PORT = process.env.PORT || 3001;
 
+router.post("/signup", async (req, res) => {
+  try {
+    const hashedPassword = bcrypt.hash(req.body.password, 10);
+  } catch (error) {}
+});
+
 // Set up sessions
 const sess = {
-  secret: "Super secret secret",
+  secret: "jacob danni ricky",
+  cookie: {},
   resave: false,
   saveUninitialized: true,
+  store: new SequelizeStore({
+    db: sequelize,
+  }),
 };
 // need to READ UP ON THIS
 

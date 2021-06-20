@@ -11,7 +11,6 @@ router.post("/", async (req, res) => {
   // we are server now
   try {
     const eventTableData = await Event.create(req.body);
-    console.log(req.body);
     // reason why req.body is in nice object format is due to variable formData in addevent.js
 
     res.status(200).json(eventTableData)

@@ -1,41 +1,36 @@
 $(document).ready(function () {
   $("#submit").click(async function (e) {
     e.preventDefault();
-    const userName = $("#eventNameId").val();
-    const email = $("#producerId").val();
-    const password = $("#genreId").val();
-    const isProducer = $("#locationId").val();
+    const userName = $("#username-login").val();
+    // const email = $("#producerId").val();
+    const password = $("#password-login").val();
+    // const isProducer = $("#locationId").val();
     if (
       userName == null ||
-      email == null ||
-      password == null ||
-      isProducer == null
+      // email == null ||
+      password == null
+      // isProducer == null
     ) {
       alert("Enter all fields!");
     }
-    const formData = {
-      username: userName,
-      email: email,
-      password: password,
-      is_producer: isProducer,
-    };
 
-    //object keys (line 33-43) has to be exactly same as table 
-
-    console.log(formData)
-    // Object is already formatted nicely so in eventRoutes.js we only have to call req.body
-    let loginDataResponse = await fetch("/api/users", {
-      // how front end and back end speak to each other
-      // kitchen located api/users 
-      // this kitchen exists because of eventRoute.js file
-      // i want to send form data to the kitchen 
-      method: "POST",
-      body: JSON.stringify(formData),
-      headers: { "Content-Type": "application/json" },
+     if (userName && password) {
+    const response = await fetch('/api/users/login', {
+      method: 'POST',
+      body: JSON.stringify({ username, password }),
+      headers: { 'Content-Type': 'application/json' },
     });
+    console.log(response)
 
-    // fetch call goes into static
-    // Customer tells the order - They complete form - give their order
-    // Server takes it to the kitchen and serves it up and gives it to the customer (Client)
-  });
+    if (response.ok) {
+      document.location.replace('/');
+    } else {
+      alert('Failed to log in.');
+    }
+  }
+});
+
+
+
+
 });

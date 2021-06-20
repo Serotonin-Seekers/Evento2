@@ -22,7 +22,6 @@ $(document).ready(function () {
 
     //object keys (line 33-43) has to be exactly same as table
 
-    console.log(formData);
     // Object is already formatted nicely so in eventRoutes.js we only have to call req.body
     let loginDataResponse = await fetch("/api/users", {
       // how front end and back end speak to each other

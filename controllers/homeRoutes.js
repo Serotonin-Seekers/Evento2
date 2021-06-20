@@ -1,1 +1,1 @@
-// this is the main file where handlebars will be rendered based on the routes
+// this is the main file where handlebars will be rendered based on the routes - Ended up just doing this in index.js
