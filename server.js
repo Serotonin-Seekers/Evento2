@@ -19,22 +19,23 @@ const { User } = require("./models");
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-User.beforeCreate((user, options) => {
 
-  return bcrypt.hash(user.password, 10)
-      .then(hash => {
-          user.password = hash;
-      })
-      .catch(err => { 
-          throw new Error(); 
-      });
-      // hashes the password
+User.beforeCreate((user, options) => {
+  return bcrypt
+    .hash(user.password, 10)
+    .then((hash) => {
+      user.password = hash;
+    })
+    .catch((err) => {
+      throw new Error();
+    });
+  // hashes the password
 });
 
 // router.post("/signup", async (req, res) => {
 //   try {
 //     const hashedPassword = await bcrypt.hash(req.body.password, 10);
-    
+
 //   } catch (error) {}
 // });
 
