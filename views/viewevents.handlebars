@@ -2,19 +2,21 @@
 
 <h1>Upcoming Events</h1>
 <h2 id="eventNameId">Event: {{event.eventName}}</h2>
-<h3 id="genre">Producers: {{event.genre}}</h3>
+<h3 id="genre">Genre: {{event.genre}}</h3>
 <h3 id="producerId">Producers: {{event.productionCompanyName}}</h3>
 <h3 id="locationId"> Location: {{event.location}}</h3>
 <h3 id="startingTime"> Starting startingTime: {{event.startingTime}}</h3>
-<h3 id="startDate">{{event.startingDate}}</h3>
-<h3 id="endDate">{{event.endDate}}</h3>
+<h3 id="startDate">Start Date: {{event.startingDate}}</h3>
+<h3 id="endDate">End Date: {{event.endDate}}</h3>
 <h3>Event Summary</h3>
 <br />
 <p id="summary">
 {{event.eventSummary}}
 
 </p>
+<br />
 <a href="{{event.ticketUrl}}"><h4 id="urlId">{{event.ticketUrl}}</h4></a>
+<br />
 <img
   id="imageId"
   src="{{event.image}}"

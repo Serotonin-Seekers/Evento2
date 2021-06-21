@@ -1,10 +1,13 @@
 <h1>All Events at the Velvet Soap Box</h1>
 
 {{#each events as |event|}}
+<section id="eventLinks">
 <ul>
+    
     <a href="/event/{{event.event_id}}">
         <li>{{event.eventName}}</li>
     </a>
 </ul>
+</section>
 {{/each}}
 {{>event-details}}
