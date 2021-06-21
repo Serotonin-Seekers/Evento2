@@ -1,0 +1,43 @@
+body {
+    background-image: url("./layered-waves-haikei.png");
+    /* background-position: 100%; */
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#Hero {
+    height: 120px;
+}
+
+.dropdowns {
+    display: inline-block;
+}
+
+#navBut {
+    width: max-content;
+}
+
+.subtitle {
+color: white;
+}
+
+#about {
+    color: white;
+    background-color: rgb(50, 152, 220);
+    width: fit-content;
+    border: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.features {
+    padding-top: 40px;
+}
+
+.shiftUp {
+    padding-top: 20px;
+    margin-top: 0px;
+}
+.card {
+    border-radius: 5px;
+}

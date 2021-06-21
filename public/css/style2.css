@@ -1,62 +1,44 @@
 body {
-    font-family: Poppins;
-    background-image: url("../images/splashimage.jpg");
-    /* This messes up sightly with images loaded over each other on the home page */
-    /* Dunno if we need this - background image also is loaded from html - This only shows part of the top bar */
+    background-image: url("../images/layered-waves-haikei.png");
+    /* background-position: 100%; */
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#Hero {
+    height: 120px;
+}
+
+.dropdowns {
+    display: inline-block;
+}
+
+#navBut {
+    width: max-content;
+}
+
+.subtitle {
+color: white;
+}
+
+#about {
     color: white;
-}
-img {
-    width: 100px;
-}
-#Velvet {
-    display: block;
-    position: relative;
-    top: -2.5vh;
-    font-family: Poppins-italic;
-    font-size: 7vh;
-}
-header {
-    height: 10vh;
-    background-color: whitesmoke;
-    text-align: center;
-    margin: 0px;
+    background-color: rgb(50, 152, 220);
+    width: fit-content;
+    border: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-nav {
-    position: sticky;
-    position: -webkit-sticky;
-    top: 0px;
-    min-height: 15vh;
-}
-.nav-choice {
-    height:fit-content;
-    position: relative;
-    top: 2vh;
-    z-index: 10;
-}
-.divider {
-    display:block;
-    width: 100vw;
-    height: 0.5vh;
-    top: 100px;
-    background-color: tomato;
+.features {
+    padding-top: 40px;
 }
 
-/* nav{
-    height: 100px;
-    background-color: white;
-} */
-span {
-    font-family: Poppins;
-    color: black;
-    font-size: large;
+.shiftUp {
+    padding-top: 20px;
+    margin-top: 0px;
 }
-
-@font-face {
-    font-family: Poppins;
-    src: url(./font/Poppins-Light.ttf);
-  }
-@font-face {
-    font-family: Poppins-italic;
-    src: url(./font/Poppins-ExtraLightItalic.ttf);
+.card {
+    border-radius: 5px;
 }
