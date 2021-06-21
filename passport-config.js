@@ -1,3 +1,5 @@
+// Attempt at implementing passport-local
+
 // const LocalStrategy = require('passport-local').Strategy
 // const bcrypt = require('bcrypt')
 

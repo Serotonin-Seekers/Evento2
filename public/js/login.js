@@ -14,6 +14,7 @@ $(document).ready(function () {
       alert("Enter all fields!");
     }
 
+    // I believe this was the main source of the authentication issue - no
      if (userName && password) {
     const response = await fetch('/api/users/login', {
       method: 'POST',

@@ -44,6 +44,7 @@ router.get("/allevents", async (req, res) => {
   //  I SOMEHOW GOT THIS WORKING!!! JH - Views the link of the events
 });
 
+// Disregard homeRoutes.js - main code for sourcing events individually
 router.get("/event/:id", async (req, res) => {
   try {
     const dbEventData = await Event.findByPk(req.params.id);

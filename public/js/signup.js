@@ -22,7 +22,8 @@ $(document).ready(function () {
 
     //object keys (line 33-43) has to be exactly same as table
 
-    // Object is already formatted nicely so in eventRoutes.js we only have to call req.body
+    // I believe this is the main reason behind the session.loggedIn not working
+    //  the session is not saving the correct property info... hence attempting to log in returns false or undefined
     let loginDataResponse = await fetch("/api/users", {
       // how front end and back end speak to each other
       // kitchen located api/users
