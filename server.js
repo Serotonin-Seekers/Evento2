@@ -15,9 +15,12 @@ const sequelize = require("./config/connection");
 const helpers = require("./utils/helpers");
 const router = require("./controllers/api/eventRoutes");
 const { User } = require("./models");
+const compression = require('compression')
 
 const app = express();
 const PORT = process.env.PORT || 3001;
+
+
 
 
 User.beforeCreate((user, options) => {
@@ -49,9 +52,10 @@ const sess = {
     db: sequelize,
   }),
 };
-// need to READ UP ON THIS
 
+// middleware 
 app.use(session(sess));
+app.use(compression())
 
 const hbs = exphbs.create({ helpers });
 
